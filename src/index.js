@@ -1,4 +1,7 @@
 // import { init } from './js/chistes-page'
-import { init } from './js/usuarios-page'
+// import { init } from './js/usuarios-page'
+// init()
 
-init()
+import * as CRUD from './js/crud-provider'
+
+CRUD.getUsuario(3).then(console.log)
