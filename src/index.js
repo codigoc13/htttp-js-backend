@@ -10,3 +10,8 @@ CRUD.crearUsuario({
   name: 'Sergio',
   job: 'Programador',
 }).then(console.log)
+
+CRUD.actualizarUsuario(1, {
+  name: 'Hanna',
+  job: 'Generalista 3D',
+}).then(console.log)
