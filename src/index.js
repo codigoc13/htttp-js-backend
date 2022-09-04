@@ -15,3 +15,5 @@ CRUD.actualizarUsuario(1, {
   name: 'Hanna',
   job: 'Generalista 3D',
 }).then(console.log)
+
+CRUD.eliminarUsuario(1).then(console.log)
