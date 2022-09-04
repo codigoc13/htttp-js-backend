@@ -7,4 +7,18 @@ const getUsuario = async (id) => {
   return data
 }
 
-export { getUsuario }
+const crearUsuario = async (usuario) => {
+  const resp = await fetch(urlCRUD, {
+    method: 'POST',
+    body: JSON.stringify(usuario),
+    // Los headers son información extra que el backend puede solicitar
+    headers: {
+      'Content-type': 'application/json',
+    },
+  })
+
+  // console.log(await resp.json())
+  return await resp.json()
+}
+
+export { getUsuario, crearUsuario }
