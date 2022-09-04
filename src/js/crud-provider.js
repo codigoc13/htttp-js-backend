@@ -32,4 +32,11 @@ const actualizarUsuario = async (id, usuario) => {
   return await resp.json()
 }
 
-export { getUsuario, crearUsuario, actualizarUsuario }
+const eliminarUsuario = async (id) => {
+  const resp = await fetch(`${urlCRUD}/${id}`, {
+    method: 'DELETE',
+  })
+  return resp.ok ? 'Borrado' : 'No se pudo eliminar'
+}
+
+export { getUsuario, crearUsuario, actualizarUsuario, eliminarUsuario }
